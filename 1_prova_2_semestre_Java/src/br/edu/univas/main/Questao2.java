@@ -11,19 +11,26 @@ public class Questao2 {
 		
 		int tamanho = palavra.length();
 		String novaPal = "";
-		char leLetra;
+		char leLetra = ' ';
+		
+		
+		
+		System.out.println(invertePalavra (tamanho, leLetra, novaPal, palavra));
+		
+		read.close();
+	}
+
+	public static String invertePalavra (int tamanho, char leLetra, String novaPal, String palavra) {
 		
 		for (int i = tamanho; i > 0 ; i--) {
 			
 			leLetra = palavra.charAt(i-1);
-			System.out.println(leLetra);
+			
 			novaPal = novaPal + leLetra;
 			
 		}
 		
-		System.out.println(novaPal);
-		
-		read.close();
+		return novaPal;
 	}
 	
 }

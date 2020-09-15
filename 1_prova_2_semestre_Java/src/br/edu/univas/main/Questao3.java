@@ -8,7 +8,19 @@ public class Questao3 {
 		
 		Scanner read = new Scanner (System.in);
 		
+		String palavra = read.nextLine();
 		
+		int tamanho = palavra.length();
+		String novaPal = "";
+		char leLetra;
+		
+		for (int i = tamanho; i > 0 ; i--) {
+			
+			leLetra = palavra.charAt(i-1);
+			System.out.println(leLetra);
+			novaPal = novaPal + leLetra;
+			
+		}
 		
 		
 		
