@@ -9,22 +9,42 @@ public class Questao3 {
 		Scanner read = new Scanner (System.in);
 		
 		String palavra = read.nextLine();
-		
 		int tamanho = palavra.length();
 		String novaPal = "";
-		char leLetra;
+		char leLetra = ' ';
 		
-		for (int i = tamanho; i > 0 ; i--) {
-			
-			leLetra = palavra.charAt(i-1);
-			System.out.println(leLetra);
-			novaPal = novaPal + leLetra;
-			
-		}
+		novaPal = invertePalavra(tamanho,leLetra,novaPal,palavra);
 		
 		
 		
 		read.close();
+	}
+
+	public static String invertePalavra (int tamanho, char leLetra, String novaPal, String palavra) {
+		
+		for (int i = tamanho; i > 0 ; i--) {
+			
+			leLetra = palavra.charAt(i-1);
+			
+			novaPal = novaPal + leLetra;
+			
+		}
+		
+		return novaPal;
+	}
+
+	public static boolean verificaPalin (String novaPal, String palavra) {
+		
+		if (novaPal == palavra) {
+			
+			return true;
+			
+		}else {
+			
+			return false;
+			
+		}
+		
 	}
 
 }
